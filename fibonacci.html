@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>fibonacci</title>
+</head>
+
+<body>
+    <h2>Program to print fibonacci series</h2>
+    <!-- steps Step 1:Declare the variables x, y, z, n, i 
+        Step 2:Initialize the local variable x = 1, y = 1, i = 2 
+        Step 3:Read a number from the user 
+        Step 4:Display the value of x and y 
+        Step 5:Repeat the process of Fibonacci series until i > n 1. z = x + y 2.
+         Display the value of z 3. x = y, y = ... -->
+
+    <script>
+        //fibonacci with while loop
+        // n = prompt("enter fibonacci number");
+
+        // var fib = function(n) {
+        //     var a = 0,
+        //         b = 1,
+        //         f = 1,
+        //         i = 2;
+        //     var arr = [];
+        //     while (f < n) {
+        //         arr.push(f);
+        //         f = a + b;
+        //         a = b;
+        //         b = f;
+        //         i++;
+        //     }
+        //     return arr;
+        // }
+        // var fibArr = fib(70);
+        // alert(fibArr);
+
+        //fibonacci with for loop
+        n = prompt("enter fibonacci number");
+        const fib = n => {
+            const array = Array(n);
+            for (i = 0; i < array.length; i++) {
+                if (i > 1) {
+                    array[i] = array[i - 1] + array[i - 2];
+                } else {
+                    array[i] = 1;
+                }
+            }
+            return array;
+
+
+        }
+        var fibArr = fib(20);
+        alert(fibArr);
+    </script>
+</body>
+
+</html>

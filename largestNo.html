@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2> a program to get largest number</h2>
+    <script>
+        const arr = [10, 20, 30, 40, 50];
+        const max = Math.max(...arr);
+
+        console.log(max);
+        //series of maximun number
+        const largest = (arr) => {
+            let max = Number.MIN_SAFE_INTEGER;
+            for (let val of arr) {
+                if (val > max) {
+                    max = val;
+                }
+            }
+            return val;
+        }
+
+        console.log(largest([10, 20, 30, 40, 50]));
+        //50
+    </script>
+</body>
+
+</html>

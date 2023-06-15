@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>program to print 10 Numbers</h1>
+    <script>
+        var logNums = function(num) {
+
+            for (var i = 1; i <= num; i++) {
+                console.log(i);
+            }
+
+        };
+        //second  function
+        function printNumbers(num) {
+
+            if (num < 1) {
+                console.error('num must be greater than 1');
+                return;
+            }
+
+            if (!Number.isInteger(num)) {
+                num = Math.trunc(num);
+            }
+
+            for (var i = 1; i <= num; i++) {
+                console.info(i);
+            }
+        }
+
+        printNumbers(10);
+        //get even mumbers
+        for (i = 10; i <= 20; i++) {
+            // let's divide the value by 2
+            // if the remainder is zero then it's an even number
+
+            if (i % 2 == 0) {
+                console.log(i);
+            }
+        }
+
+        //JavaScript to print Even Numbers within a Range!
+
+        function printEvenNums() {
+            //get the start and end range from user
+            var start = parseInt(document.getElementById("start").value);
+            var end = parseInt(document.getElementById("end").value);
+            var evenNums = "<br>Even Numbers:<br>";
+
+            for (i = start; i <= end; i++) {
+                // let's divide the value by 2
+                // if the reminder is zero then it's an Even number
+                if (i % 2 == 0) {
+                    evenNums += i + "<br>";
+                }
+            }
+            //print the values
+            document.getElementById("result").innerHTML = evenNums;
+        }
+    </script>
+
+    <h3>JavaScript to print Even Numbers within a Range!</h3>
+    Start: <input type="number" min="0" id="start" value="1" /> End: <input type="number" id="end" min="1" value="20" />
+    <input type="button" onclick="printEvenNums()" value="Print Even Numbers" />
+    <div id="result"></div>
+
+
+    </script>
+</body>
+
+</html>
